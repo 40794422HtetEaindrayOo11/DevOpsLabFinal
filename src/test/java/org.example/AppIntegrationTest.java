@@ -8,18 +8,18 @@ import java.util.ArrayList;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class AppIntegrationTest {
-    static App app;
+    static org.example.App app;
 
     @BeforeAll
     static void init() {
-        app = new App();
+        app = new org.example.App();
         app.connect("localhost:33060", 30000);
 
     }
 
     @Test
     void testGetEmployee() {
-        Employee emp = app.getEmployee(255530);
+        org.example.Employee emp = app.getEmployee(255530);
         assertEquals(emp.emp_no, 255530);
         assertEquals(emp.first_name, "Ronghao");
         assertEquals(emp.last_name, "Garigliano");
