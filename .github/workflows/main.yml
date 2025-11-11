@@ -18,6 +18,8 @@ jobs:
       - name: Unit Tests
         run: mvn -Dtest=org.example.AppTest test
 
+
+
   IntegrationTests:
     name: Integration Tests
     runs-on: ubuntu-22.04
